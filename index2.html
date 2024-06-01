@@ -20,12 +20,29 @@
   </head>
 
   <body>
-    <h1>Tính và xuất bill tiền điện</h1>
-
-    <input type="text" id="hovaten" placeholder="Họ và tên" />
-    <input type="number" id="soKw" placeholder="Nhập số kw" />
-    <button id="btnKetQua">Tính tiền điện</button>
-
+    <div class="container">
+      <form class="row g-3 mt-4">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            id="hovaten"
+            placeholder="Họ và tên"
+          />
+        </div>
+        <div class="col">
+          <input
+            type="number"
+            class="form-control"
+            id="soKw"
+            placeholder="Nhập số kw"
+          />
+        </div>
+        <button class="btn-primary btn" type="button" id="btnKetQua">
+          Tính tiền điện
+        </button>
+      </form>
+    </div>
     <div id="ketQua"></div>
 
     <header>

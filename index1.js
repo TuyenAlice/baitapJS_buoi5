@@ -7,6 +7,11 @@ function quanLyTuyensinh() {
   let chonDoiTuong = Number(document.getElementById("chonDoiTuong").value);
   let diemUutien = chonDoiTuong + chonKhuVuc;
   let diemtongKet = diemMon1 + diemMon2 + diemMon3 + diemUutien;
+  if (isNaN(diemtongKet)) {
+    document.getElementById("ketQua").textContent =
+      "Bạn đã rớt.  Do có điểm nhỏ hơn hoặc bằng 0";
+    return;
+  }
   if (
     diemtongKet >= diemchuan &&
     diemMon1 > 0 &&

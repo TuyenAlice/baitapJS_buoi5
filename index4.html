@@ -18,42 +18,61 @@
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
-
+  <style>
+    .show {
+      display: block;
+    }
+    .hide {
+      display: none;
+    }
+  </style>
   <body>
-    <div class="container mt-4">
-      <div class="row mb-4">
-        <div class="col-sm">
-          <input
-            id="hovaten"
-            type="text"
-            class="form-control"
-            placeholder="Nhập họ và tên"
-          />
+    <div class="container">
+      <form class="row gx-3 gy-2 align-items-center mt-4">
+        <div class="col-sm-3">
+          <select
+            class="form-select"
+            id="ChonLoaiKH"
+            onchange="chonDoanhnghiep()"
+          >
+            <option selected>Choose...</option>
+            <option value="1">Nhà dân</option>
+            <option value="2">Doanh nghiệp</option>
+          </select>
         </div>
-        <div class="col-sm">
+        <div class="col-sm-3">
           <input
-            id="tongThuNhap"
             type="number"
             class="form-control"
-            placeholder="Tổng thu nhập năm"
+            id="maKH"
+            placeholder="Mã khách hàng"
           />
         </div>
-        <div class="col-sm">
+        <div class="col-sm-3">
           <input
-            id="nguoiPhuthuoc"
             type="number"
             class="form-control"
-            placeholder="Số người phụ thuộc"
+            id="sokenhcaocap"
+            placeholder="Số kênh cao cấp"
           />
         </div>
-      </div>
-      <button class="btn btn-primary" id="btnKetQua">
-        Tính Thuế thu nhập cá nhân
-      </button>
+        <div class="col-auto">
+          <button id="btnKetQua" type="button" class="btn btn-primary">
+            Tính tiền cáp
+          </button>
+        </div>
+        <div class="col-3">
+          <input
+            type="number"
+            class="form-control hide"
+            id="soKetnoi"
+            placeholder="Số kết nối"
+          />
+        </div>
+      </form>
 
       <div id="ketQua"></div>
     </div>
-
     <header>
       <!-- place navbar here -->
     </header>
@@ -74,6 +93,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="./index3.js"></script>
+    <script src="./index4.js"></script>
   </body>
 </html>

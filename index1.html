@@ -20,26 +20,65 @@
   </head>
 
   <body>
-    <h1>Tính tổng điểm</h1>
-
-    <input type="number" id="diemchuan" placeholder="Điểm chuẩn" />
-    <select id="chonKhuVuc" class="form-select" aria-label="Chọn khu vực">
-      <option selected>Chọn khu vực</option>
-      <option value="2">A</option>
-      <option value="1">B</option>
-      <option value="0.5">C</option>
-    </select>
-    <select id="chonDoiTuong" class="form-select" aria-label="Chọn đối tượng">
-      <option selected>Chọn đối tượng</option>
-      <option value="2.5">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-    </select>
-    <input type="number" id="diemMon1" placeholder="Điểm môn thứ 1" />
-    <input type="number" id="diemMon2" placeholder="Điểm môn thứ 2" />
-    <input type="number" id="diemMon3" placeholder="Điểm môn thứ 3" />
-    <button id="btnKetQua">Kết Quả</button>
-
+    <div class="container">
+      <form class="row gx-3 gy-2 align-items-center mt-4">
+        <div class="col-4">
+          <input
+            type="number"
+            class="form-control"
+            id="diemchuan"
+            placeholder="Điểm chuẩn"
+          />
+        </div>
+        <div class="col-4">
+          <select id="chonKhuVuc" class="form-select" aria-label="Chọn khu vực">
+            <option selected>Chọn khu vực</option>
+            <option value="2">A</option>
+            <option value="1">B</option>
+            <option value="0.5">C</option>
+          </select>
+        </div>
+        <div class="col-4">
+          <select
+            id="chonDoiTuong"
+            class="form-select col-3"
+            aria-label="Chọn đối tượng"
+          >
+            <option selected>Chọn đối tượng</option>
+            <option value="2.5">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <div class="col-4">
+          <input
+            type="number"
+            class="form-control"
+            id="diemMon1"
+            placeholder="Điểm môn thứ 1"
+          />
+        </div>
+        <div class="col-4">
+          <input
+            type="number"
+            class="form-control"
+            id="diemMon2"
+            placeholder="Điểm môn thứ 2"
+          />
+        </div>
+        <div class="col-4">
+          <input
+            type="number"
+            class="form-control"
+            id="diemMon3"
+            placeholder="Điểm môn thứ 3"
+          />
+        </div>
+        <button class="btn btn-primary" type="button" id="btnKetQua">
+          Kết Quả
+        </button>
+      </form>
+    </div>
     <div id="ketQua"></div>
 
     <header>
